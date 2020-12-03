@@ -1,0 +1,50 @@
+<app-base-search-screen-desktop *appMobile="false"
+                                [readService]="trainingsReadService.readService"
+                                [filterTemplate]="filterTemplate"
+                                [listTemplate]="listTemplate"
+                                [previewOnListTemplate]="previewOnListTemplate"
+                                [previewOnMapTemplate]="previewOnMapTemplate"
+                                [mapTemplate]="mapTemplate">
+</app-base-search-screen-desktop>
+<!--<app-base-search-screen-mobile *appMobile="true"-->
+<!--                               [readService]="operatorsReadService.readService"-->
+<!--                               [scrollSubject]="scrollSubject"-->
+<!--                               [fetchMoreCallback]="fetchMoreOperatorsCallback()"-->
+<!--                               [filterTemplate]="filterTemplate"-->
+<!--                               [listTemplate]="listTemplate"-->
+<!--                               [mapTemplate]="mapTemplate"-->
+<!--                               [previewTemplate]="previewMobile">-->
+<!--</app-base-search-screen-mobile>-->
+
+<ng-template #filterTemplate>
+  <div>Filters</div>
+<!--  <app-operators-filter></app-operators-filter>-->
+</ng-template>
+
+<ng-template #listTemplate>
+  <app-trainings-list></app-trainings-list>
+<!--  <app-operators-list></app-operators-list>-->
+</ng-template>
+
+<ng-template #mapTemplate>
+  <div>Map</div>
+<!--  <app-operators-map></app-operators-map>-->
+</ng-template>
+
+<ng-template #previewOnMapTemplate>
+  <div>Preview</div>
+<!--  <app-operator-preview [showCloseButton]="true"-->
+<!--                        [previewOnMap]="true">-->
+<!--  </app-operator-preview>-->
+</ng-template>
+<ng-template #previewOnListTemplate>
+  <div>preview on map</div>
+<!--  <app-operator-preview [showCloseButton]="true"-->
+<!--                        [previewOnMap]="false">-->
+<!--  </app-operator-preview>-->
+</ng-template>
+<!--<ng-template #previewMobile>-->
+<!--  <app-operator-mobile-preview>-->
+<!--  </app-operator-mobile-preview>-->
+<!--</ng-template>-->
+

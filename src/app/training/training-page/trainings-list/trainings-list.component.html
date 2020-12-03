@@ -1,0 +1,19 @@
+<app-base-search-screen-list [countTextCallback]="countText"
+                             [readService]="trainingsService.readService"
+                             [fetchMoreCallback]="fetchMoreProfilesCallback()"
+                             [initialized]="true"
+                             [templateRef]="operatorItem"
+                             [templateRefGhost]="operatorItemGhost">
+</app-base-search-screen-list>
+
+<ng-template #operatorItem
+             let-training="item">
+<!--  <app-operator-item [operator]="operator"></app-operator-item>-->
+  <div>{{training.name}}</div>
+</ng-template>
+
+
+<ng-template #operatorItemGhost>
+<!--  <app-operator-item [ghost]="true"></app-operator-item>-->
+  <div>div</div>
+</ng-template>
