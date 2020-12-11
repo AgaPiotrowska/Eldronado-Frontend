@@ -23,13 +23,28 @@ export class TrainingsReadService {
     // this.readService.fetchLocations(this.profileService.getProfilesLocations(type, viewport));
     const trainings: Training[] = [
       {
-        id: 1
+        id: 1,
+        latitude: 52,
+        longitude: 21,
+        getNumber(): number {
+          return 1;
+        }
       },
       {
-        id: 2
+        id: 2,
+        latitude: 22,
+        longitude: 53,
+        getNumber(): number {
+          return 1;
+        }
       },
       {
-        id: 3
+        id: 3,
+        latitude: 23,
+        longitude: 54,
+        getNumber(): number {
+          return 1;
+        }
       }
     ];
     const trainingDataRequestMock = of(trainings);
@@ -42,17 +57,42 @@ export class TrainingsReadService {
       {
         id: 1,
         price: 100,
-        name: 'Szkolenie1'
+        name: 'Szkolenie1',
+        isOnline: true,
+        companyName: 'Latamy',
+        theoryHours: 29,
+        practiceHours: 10,
+        exam: true,
+        latitude: 21,
+        longitude: 52,
+        www: 'www.latamy.pl',
+        city: 'Warszawa',
+        getNumber(): number {
+          return 1;
+        }
       },
       {
         id: 2,
         price: 150,
-        name: 'Szkolenie2'
+        name: 'Szkolenie2',
+        isOnline: false,
+        companyName: 'Dron me',
+        practiceHours: 15,
+        latitude: 22,
+        longitude: 53,
+        getNumber(): number {
+          return 1;
+        }
       },
       {
         id: 3,
         price: 300,
-        name: 'Szkolenie3'
+        name: 'Szkolenie3',
+        latitude: 23,
+        longitude: 54,
+        getNumber(): number {
+          return 1;
+        }
       }
     ];
     const trainingDataRequestMock = of(trainings);
